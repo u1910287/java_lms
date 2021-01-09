@@ -1,0 +1,86 @@
+Sat Jan 09 09:22:50 UZT 2021 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Sat Jan 09 09:22:50 UZT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0176-e561-f34c-ffffd6157d93 
+on database directory C:\Users\LENOVO\Documents\subjects2\java\Derby\logindb2 with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Users/LENOVO/Documents/subjects2/java/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_271-b09
+user.dir=C:\Users\LENOVO\Documents\subjects2\java\db-derby-10.14.2.0-bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\LENOVO\Documents\subjects2\java\Derby
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sat Jan 09 09:22:52 UZT 2021:
+Shutting down instance a816c00e-0176-e561-f34c-ffffd6157d93 on database directory C:\Users\LENOVO\Documents\subjects2\java\Derby\logindb2 with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Sat Jan 09 09:22:52 UZT 2021 Thread[DRDAConnThread_3,5,main] (DATABASE = logindb2), (DRDAID = {2}), Database 'logindb2' shutdown.
+----------------------------------------------------------------
+Sat Jan 09 09:23:03 UZT 2021:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 6ede40af-0176-e561-f34c-ffffd6157d93 
+on database directory C:\Users\LENOVO\Documents\subjects2\java\Derby\logindb2 with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+Loaded from file:/C:/Users/LENOVO/Documents/subjects2/java/db-derby-10.14.2.0-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_271-b09
+user.dir=C:\Users\LENOVO\Documents\subjects2\java\db-derby-10.14.2.0-bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\LENOVO\Documents\subjects2\java\Derby
+Database Class Loader started - derby.database.classpath=''
+Sat Jan 09 11:58:57 UZT 2021 Thread[DRDAConnThread_3,5,main] Cleanup action starting
+java.sql.SQLException: Database 'logindb' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ004: Database 'logindb' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 21 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: Database 'logindb' not found.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+Sat Jan 09 11:58:57 UZT 2021 Thread[DRDAConnThread_3,5,main] (DATABASE = logindb), (DRDAID = {8}), Database 'logindb' not found.
